@@ -25,5 +25,12 @@ namespace ConsoleApp1
         {
             Mana = mana;
         }
+
+        public override string GetDescription()
+        {
+            return base.GetDescription() + $" - mana:{Mana}";
+        }
+
+
     }
 }

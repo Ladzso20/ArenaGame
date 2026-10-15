@@ -30,5 +30,15 @@ namespace ConsoleApp1
         {
             Armor = armor;
         }
+
+        public override string GetDescription()
+        {
+            return base.GetDescription() + $" - armor:{Armor}";
+        }
+
+        public override bool TakeDamage(int amount)
+        {
+            return base.TakeDamage(amount-Armor);
+        }
     }
 }

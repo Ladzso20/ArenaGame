@@ -47,10 +47,41 @@ namespace ConsoleApp1
             return _health > 0;
         }
 
-        public string GetDescription()
+       
+
+        public virtual bool TakeDamage(int amount)
+        {
+            if(amount < 1 || !IsAlive()) 
+            {
+                return false;
+            }
+            else
+            {
+                Health -= amount;
+                return true;
+            }
+
+        }
+
+
+        public bool Heal(int amount)
+        {
+            if (amount < 1 || !IsAlive())
+            {
+                return false;
+            }
+            else
+            {
+                Health += amount;
+                return true;
+            }
+        }
+
+        public virtual string GetDescription()
         {
             return $"{Name} ({Health})";
         }
+
 
     }
 }

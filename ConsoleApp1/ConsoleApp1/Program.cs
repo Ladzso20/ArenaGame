@@ -22,6 +22,17 @@
             Console.WriteLine(m.GetDescription());
             Console.WriteLine("Total number if Cahracter" + Character.Count);
 
+
+            Console.WriteLine("Damage warrior: " + w.TakeDamage(30));
+            Console.WriteLine("warrior health" + w.Health);
+            Console.WriteLine("Damage heal: " + w.Heal(30));
+            Console.WriteLine("warrior health" + w.Health);
+
+
+            Console.WriteLine("Damage warrior: " + m.TakeDamage(50));
+            Console.WriteLine("mage health" + m.Health);
+            Console.WriteLine("Damage heal: " + m.Heal(200));
+            Console.WriteLine("mage health" + m.Health);
         }
     }
 }
